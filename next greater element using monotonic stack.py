@@ -6,7 +6,7 @@ class Solution:
         output=[]
         for i in reversed(range(len(nums2))):
            
-            whi  le stack and stack[-1]<nums2[i]:
+            while stack and stack[-1]<nums2[i]:
                 stack.pop()
             if len(stack)==0:
                 dicti[nums2[i]]=-1
