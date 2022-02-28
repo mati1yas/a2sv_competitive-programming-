@@ -16,3 +16,19 @@ class Solution:
                 return max (calc(root.left,depth+1),calc(root.right,depth+1))
         return calc(root,depth)
         
+/////
+lass Solution:
+    
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        
+        
+        if not root:
+            return 0
+        
+        
+        leftval=self.maxDepth(root.left)
+        
+        
+        rightval=self.maxDepth(root.right)
+        print(rightval,"left")
+        return max(leftval,rightval)+1
